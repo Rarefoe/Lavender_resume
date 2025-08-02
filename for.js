@@ -30,3 +30,15 @@ window.onload = function () {
     } else {
       generateResume();
     }
+     function generateResume() {
+      // Collect dynamic education data
+      const degrees = Array.from(document.getElementsByName("degree[]")).map(d => d.value);
+      const institutions = Array.from(document.getElementsByName("institution[]")).map(i => i.value);
+      const gradYears = Array.from(document.getElementsByName("gradYear[]")).map(y => y.value);
+
+      let educationHTML = "";
+      for (let i = 0; i < degrees.length; i++) {
+        if (degrees[i] && institutions[i] && gradYears[i]) {
+          educationHTML += `<p><strong>${degrees[i]}</strong>, ${institutions[i]} (${gradYears[i]})</p>`;
+        }
+      }
