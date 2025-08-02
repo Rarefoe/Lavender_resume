@@ -42,3 +42,22 @@ window.onload = function () {
           educationHTML += `<p><strong>${degrees[i]}</strong>, ${institutions[i]} (${gradYears[i]})</p>`;
         }
       }
+      // Collect dynamic experience data
+      const jobTitles = Array.from(document.getElementsByName("jobTitle[]")).map(j => j.value);
+      const companies = Array.from(document.getElementsByName("company[]")).map(c => c.value);
+      const startDates = Array.from(document.getElementsByName("startDate[]")).map(s => s.value);
+      const endDates = Array.from(document.getElementsByName("endDate[]")).map(e => e.value);
+      const responsibilities = Array.from(document.getElementsByName("responsibilities[]")).map(r => r.value);
+
+      let experienceHTML = "";
+      for (let i = 0; i < jobTitles.length; i++) {
+        if (jobTitles[i] || companies[i]) {
+          experienceHTML += `
+            <div style="margin-bottom: 15px;">
+              <p><strong>${jobTitles[i] || 'Position'}</strong> at ${companies[i] || 'Company'}</p>
+              <p><em>${startDates[i] || 'Start'} - ${endDates[i] || 'End'}</em></p>
+              <p>${responsibilities[i] ? responsibilities[i].replace(/\n/g, "<br>") : ''}</p>
+            </div>
+          `;
+        }
+      }
