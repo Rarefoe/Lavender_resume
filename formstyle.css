@@ -1,0 +1,121 @@
+body{
+    
+cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+
+    background-color: rgb(202, 169, 232);
+        background: url('4f7383bb7510047a6c27450df8255537.jpg') center/cover no-repeat;
+         font-family: Arial, sans-serif;
+    padding: 20px;
+    
+    
+}
+
+
+h1 {
+    text-align: center;
+    color: #4f1a5a;
+}
+
+form {
+    background: #ebdff6;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #7a3ea1;
+    margin-bottom: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+}
+.btn {
+    background: #7a3ea1;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+}
+.btn:hover {
+    background: #5c2d7f;
+}
+/* Resume Layout */
+.resume-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+}
+/* Left Column */
+.left-column {
+    background: #f3e8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Right Column */
+.right-column {
+    padding: 20px;
+}
+/* Headings */
+.resume-container h1 {
+    font-size: 2rem;
+    color: #4f1a5a;
+}
+
+.resume-container h2 {
+    border-bottom: 2px solid #7a3ea1;
+    color: #7a3ea1;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+/* Paragraphs */
+.resume-container p {
+    margin: 8px 0;
+}
+
+/* Download Button */
+button.btn {
+    background: #7a3ea1;
+    color: white;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.btn:hover {
+    background: #5a2a7d;
+}

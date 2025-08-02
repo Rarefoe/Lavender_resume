@@ -1,0 +1,162 @@
+body {
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+
+    margin: 0;
+    font-family: 'Cambria', Georgia, serif;
+    background: #e9d9fd; /* Soft lavender background */
+    color: #27104e;
+    line-height: 1.6;
+}
+/* Navigation bar */
+ul {
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #b45ade, #d69cf8);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+    color: #4f1a5a;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Paragraphs */
+p{
+    
+    text-align: center;
+}
+.footer{
+
+ color: rgb(39, 4, 62);
+ font-size: 1rem;
+ padding: 30px;
+}
+/* Hero Section */
+.hero {
+    background: url('b58d748d00fe94d32ff15493ba259b4f.jpg') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4f1a5a;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #f3e9fa;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    background: #c95eff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #a845d4;
+    transform: scale(1.05);
+}
+/* Features & Sections */
+.features, .how-it-works {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1080px) {
+    .features, .how-it-works {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.features div, .how-it-works div {
+    background: #f3e9fa;
+
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(124, 77, 163, 0.2);
+    border-left: 6px solid #c084fc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.features div:hover, .how-it-works div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(124, 77, 163, 0.3);
+}
+
+/* Testimonial Section */
+.testimonial {
+    max-width: 1000px;
+    background: #f3e9fa;
+    padding: 40px;
+    border-radius: 40px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #4f1a5a;
+    font-style: italic;
+    text-align: center;
+}
