@@ -69,7 +69,7 @@ window.onload = function () {
       const languagesList = Array.from(document.getElementsByName("languages[]")).map(l => l.value).filter(l => l);
       const languages = languagesList.join(", ");
        // Create resume HTML with proper styling
-      const resumeHTML = 
+      const resumeHTML = `
       <div class="resume-container">
           <div class="header">
             ${profilePicHTML}
@@ -146,65 +146,3 @@ window.onload = function () {
       `;
     }
   });
-   // Dynamic field addition functions
-  window.addEducation = function () {
-    const container = document.getElementById("educationSection");
-    const newDiv = document.createElement("div");
-    newDiv.className = "education-entry";
-    newDiv.innerHTML = `
-      <hr style="margin: 20px 0;">
-      <label>Degree:</label>
-      <select name="degree[]" required>
-        <option value="">--Select Degree--</option>
-        <option>High School</option>
-        <option>Diploma</option>
-        <option>Bachelor's</option>
-        <option>Master's</option>
-        <option>PhD</option>
-      </select><br><br>
-      <label>Institution:</label>
-      <input type="text" name="institution[]" required><br><br>
-      <label>Graduation Year:</label>
-      <input type="number" name="gradYear[]" min="1900" max="2025" required><br><br>
-    `;
-    container.appendChild(newDiv);
-  };
-  window.addExperience = function () {
-    const container = document.getElementById("experienceSection");
-    const newDiv = document.createElement("div");
-    newDiv.className = "experience-entry";
-    newDiv.innerHTML = `
-      <hr style="margin: 20px 0;">
-      <label>Job Title:</label>
-      <input type="text" name="jobTitle[]"><br><br>
-      <label>Company:</label>
-      <input type="text" name="company[]"><br><br>
-      <label>Start Date:</label>
-      <input type="month" name="startDate[]"><br><br>
-      <label>End Date:</label>
-      <input type="month" name="endDate[]"><br><br>
-      <label>Responsibilities / Achievements:</label>
-      <textarea name="responsibilities[]" rows="4" placeholder="Use bullet points for clarity"></textarea><br><br>
-    `;
-    container.appendChild(newDiv);
-  };
-  window.addSkill = function () {
-    const container = document.getElementById("skillsSection");
-    const newDiv = document.createElement("div");
-    newDiv.innerHTML = `
-      <label>Skill:</label>
-      <input type="text" name="skills[]" placeholder="e.g., Python, Project Management"><br><br>
-    `;
-    container.appendChild(newDiv);
-  };
-
-  window.addLanguage = function () {
-    const container = document.getElementById("languageSection");
-    const newDiv = document.createElement("div");
-    newDiv.innerHTML = `
-      <label>Language:</label>
-      <input type="text" name="languages[]" placeholder="e.g., Spanish, French"><br><br>
-    `;
-    container.appendChild(newDiv);
-  };
-};
