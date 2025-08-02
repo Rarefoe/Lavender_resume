@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYP<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,18 @@
     <link rel="icon" type="icon" href="favicon.ico">
     <link rel="stylesheet" href="formstyle.css">
 </head>
- <!-- Personal Information -->
+<body>
+    <h1>Please Fill Up the form!</h1>
+    <form id="resumeForm" method="POST" enctype="multipart/form-data">
+        
+        <!-- Profile Picture -->
+        <fieldset>
+            <legend>Profile Picture</legend>
+            <label for="profilePic">Upload Profile Picture (optional):</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*"><br><br>
+        </fieldset>
+
+        <!-- Personal Information -->
         <fieldset>
             <legend>Personal Information</legend>
             <label for="fullName">Full Name<span class="required-star">*</span></label>
@@ -25,12 +36,14 @@
             <label for="links">LinkedIn/GitHub/Portfolio</label>
             <input type="url" id="links" name="links" placeholder="https://linkedin.com/in/username"><br><br>
         </fieldset>
-         <!-- Career Objective -->
+
+        <!-- Career Objective -->
         <fieldset>
             <legend>Career Objective</legend>
             <textarea id="careerObjective" name="careerObjective" rows="4" placeholder="Write a short summary about your goals, experience, and passion..." required></textarea>
         </fieldset>
-<!-- Education -->
+
+        <!-- Education -->
         <fieldset>
             <legend>Education</legend>
             <div id="educationSection">
@@ -54,7 +67,8 @@
             </div>
             <button type="button" onclick="addEducation()">+ Add More Education</button>
         </fieldset>
-         <!-- Work Experience -->
+        
+        <!-- Work Experience -->
         <fieldset>
             <legend>Work Experience</legend>
             <div id="experienceSection">
@@ -77,7 +91,8 @@
             </div>
             <button type="button" onclick="addExperience()">+ Add More Experience</button>
         </fieldset>
-         <!-- Skills -->
+
+        <!-- Skills -->
         <fieldset>
             <legend>Skills</legend>
             <div id="skillsSection">
@@ -86,7 +101,8 @@
             </div>
             <button type="button" onclick="addSkill()">+ Add More Skills</button>
         </fieldset>
-         <!-- Languages -->
+
+        <!-- Languages -->
         <fieldset>
             <legend>Languages Known</legend>
             <div id="languageSection">
@@ -95,25 +111,29 @@
             </div>
             <button type="button" onclick="addLanguage()">+ Add More Languages</button>
         </fieldset>
+
         <!-- Certifications -->
         <fieldset>
             <legend>Certifications</legend>
             <label for="certifications">List Certifications (optional)</label>
             <textarea id="certifications" name="certifications" rows="3" placeholder="E.g., AWS Certified, PMP"></textarea>
         </fieldset>
+
         <!-- Projects -->
         <fieldset>
             <legend>Projects</legend>
             <label for="projects">Projects</label>
             <textarea id="projects" name="projects" rows="4" placeholder="E.g., Portfolio Website – Built with React, E-commerce Store – Developed with Django"></textarea>
         </fieldset>
+
         <!-- References -->
         <fieldset>
             <legend>References</legend>
             <label for="references">References</label>
             <textarea id="references" name="references" rows="4" placeholder="E.g., John Doe, Manager at XYZ Company, johndoe@email.com"></textarea>
         </fieldset>
-         <!-- Submit and reset -->
+
+        <!-- Submit and reset -->
         <button type="submit" class="btn">Generate Resume</button>
         <button type="reset" class="btn" style="background: rgb(104, 26, 107); margin-top: 10px;">Reset Form</button>
     </form>

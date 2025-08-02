@@ -4,7 +4,8 @@ window.onload = function () {
       event.preventDefault();
       return;
     }
-     event.preventDefault();
+
+    event.preventDefault();
 
     // Collect static form data
     const fullName = document.getElementById("fullName").value;
@@ -16,7 +17,8 @@ window.onload = function () {
     const certifications = document.getElementById("certifications").value;
     const projects = document.getElementById("projects").value;
     const references = document.getElementById("references").value;
-// Handle profile picture
+
+    // Handle profile picture
     const profilePicInput = document.getElementById("profilePic");
     let profilePicHTML = "";
     if (profilePicInput.files && profilePicInput.files[0]) {
@@ -30,7 +32,8 @@ window.onload = function () {
     } else {
       generateResume();
     }
-     function generateResume() {
+
+    function generateResume() {
       // Collect dynamic education data
       const degrees = Array.from(document.getElementsByName("degree[]")).map(d => d.value);
       const institutions = Array.from(document.getElementsByName("institution[]")).map(i => i.value);
@@ -42,6 +45,7 @@ window.onload = function () {
           educationHTML += `<p><strong>${degrees[i]}</strong>, ${institutions[i]} (${gradYears[i]})</p>`;
         }
       }
+
       // Collect dynamic experience data
       const jobTitles = Array.from(document.getElementsByName("jobTitle[]")).map(j => j.value);
       const companies = Array.from(document.getElementsByName("company[]")).map(c => c.value);
@@ -61,16 +65,53 @@ window.onload = function () {
           `;
         }
       }
-       // Collect dynamic skills
+
+      // Collect dynamic skills
       const skillsList = Array.from(document.getElementsByName("skills[]")).map(s => s.value).filter(s => s);
       const skills = skillsList.join(", ");
 
       // Collect dynamic languages
       const languagesList = Array.from(document.getElementsByName("languages[]")).map(l => l.value).filter(l => l);
       const languages = languagesList.join(", ");
-       // Create resume HTML with proper styling
+
+      // Create resume HTML with proper styling
       const resumeHTML = `
-      <div class="resume-container">
+        <style>
+          .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          }
+          .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+          }
+          .section {
+            margin-bottom: 25px;
+          }
+          .section h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+          }
+          .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 15px 0;
+          }
+          .contact-info p {
+            margin: 5px;
+          }
+        </style>
+        <div class="resume-container">
           <div class="header">
             ${profilePicHTML}
             <h1>${fullName}</h1>
@@ -81,7 +122,8 @@ window.onload = function () {
               ${links ? `<p><strong>Portfolio:</strong> <a href="${links}" target="_blank">${links}</a></p>` : ''}
             </div>
           </div>
-           ${careerObjective ? `
+
+          ${careerObjective ? `
           <div class="section">
             <h2>Career Objective</h2>
             <p>${careerObjective.replace(/\n/g, "<br>")}</p>
@@ -94,7 +136,8 @@ window.onload = function () {
             ${educationHTML}
           </div>
           ` : ''}
-           ${experienceHTML ? `
+
+          ${experienceHTML ? `
           <div class="section">
             <h2>Work Experience</h2>
             ${experienceHTML}
@@ -107,7 +150,8 @@ window.onload = function () {
             <p>${skills}</p>
           </div>
           ` : ''}
-           ${languages ? `
+
+          ${languages ? `
           <div class="section">
             <h2>Languages</h2>
             <p>${languages}</p>
@@ -136,6 +180,7 @@ window.onload = function () {
           ` : ''}
         </div>
       `;
+
       document.body.innerHTML = `
         <h1 style="text-align:center; margin: 20px 0;">Your Generated Resume</h1>
         ${resumeHTML}
@@ -146,7 +191,7 @@ window.onload = function () {
       `;
     }
   });
-  
+
   // Dynamic field addition functions
   window.addEducation = function () {
     const container = document.getElementById("educationSection");
@@ -170,7 +215,8 @@ window.onload = function () {
     `;
     container.appendChild(newDiv);
   };
-   window.addExperience = function () {
+
+  window.addExperience = function () {
     const container = document.getElementById("experienceSection");
     const newDiv = document.createElement("div");
     newDiv.className = "experience-entry";
@@ -190,4 +236,23 @@ window.onload = function () {
     container.appendChild(newDiv);
   };
 
-}
+  window.addSkill = function () {
+    const container = document.getElementById("skillsSection");
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+      <label>Skill:</label>
+      <input type="text" name="skills[]" placeholder="e.g., Python, Project Management"><br><br>
+    `;
+    container.appendChild(newDiv);
+  };
+
+  window.addLanguage = function () {
+    const container = document.getElementById("languageSection");
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+      <label>Language:</label>
+      <input type="text" name="languages[]" placeholder="e.g., Spanish, French"><br><br>
+    `;
+    container.appendChild(newDiv);
+  };
+};
