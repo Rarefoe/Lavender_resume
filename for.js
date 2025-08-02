@@ -146,3 +146,27 @@ window.onload = function () {
       `;
     }
   });
+  
+  // Dynamic field addition functions
+  window.addEducation = function () {
+    const container = document.getElementById("educationSection");
+    const newDiv = document.createElement("div");
+    newDiv.className = "education-entry";
+    newDiv.innerHTML = `
+      <hr style="margin: 20px 0;">
+      <label>Degree:</label>
+      <select name="degree[]" required>
+        <option value="">--Select Degree--</option>
+        <option>High School</option>
+        <option>Diploma</option>
+        <option>Bachelor's</option>
+        <option>Master's</option>
+        <option>PhD</option>
+      </select><br><br>
+      <label>Institution:</label>
+      <input type="text" name="institution[]" required><br><br>
+      <label>Graduation Year:</label>
+      <input type="number" name="gradYear[]" min="1900" max="2025" required><br><br>
+    `;
+    container.appendChild(newDiv);
+  };
