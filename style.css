@@ -65,3 +65,37 @@ p{
     
     text-align: center;
 }
+.footer{
+
+ color: rgb(39, 4, 62);
+ font-size: 1rem;
+ padding: 30px;
+}
+/* Hero Section */
+.hero {
+    background: url('b58d748d00fe94d32ff15493ba259b4f.jpg') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4f1a5a;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #f3e9fa;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+}
