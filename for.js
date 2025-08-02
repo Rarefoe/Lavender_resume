@@ -107,3 +107,32 @@ window.onload = function () {
             <p>${skills}</p>
           </div>
           ` : ''}
+           ${languages ? `
+          <div class="section">
+            <h2>Languages</h2>
+            <p>${languages}</p>
+          </div>
+          ` : ''}
+
+          ${projects ? `
+          <div class="section">
+            <h2>Projects</h2>
+            <p>${projects.replace(/\n/g, "<br>")}</p>
+          </div>
+          ` : ''}
+
+          ${certifications ? `
+          <div class="section">
+            <h2>Certifications</h2>
+            <p>${certifications.replace(/\n/g, "<br>")}</p>
+          </div>
+          ` : ''}
+
+          ${references ? `
+          <div class="section">
+            <h2>References</h2>
+            <p>${references.replace(/\n/g, "<br>")}</p>
+          </div>
+          ` : ''}
+        </div>
+      `;
