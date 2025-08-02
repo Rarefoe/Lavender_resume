@@ -99,3 +99,21 @@ p{
     padding: 15px;
     border-radius: 10px;
 }
+
+/* Buttons */
+.btn {
+    background: #c95eff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #a845d4;
+    transform: scale(1.05);
+}
