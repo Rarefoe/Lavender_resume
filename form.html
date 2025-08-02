@@ -30,3 +30,28 @@
             <legend>Career Objective</legend>
             <textarea id="careerObjective" name="careerObjective" rows="4" placeholder="Write a short summary about your goals, experience, and passion..." required></textarea>
         </fieldset>
+<!-- Education -->
+        <fieldset>
+            <legend>Education</legend>
+            <div id="educationSection">
+                <div class="education-entry">
+                    <label for="degree">Degree<span class="required-star">*</span></label>
+                    <select name="degree[]" required>
+                        <option value="">--Select Degree--</option>
+                        <option>High School</option>
+                        <option>Diploma</option>
+                        <option>Bachelor's</option>
+                        <option>Master's</option>
+                        <option>PhD</option>
+                    </select><br><br>
+
+                    <label for="institution">Institution<span class="required-star">*</span></label>
+                    <input type="text" name="institution[]" required><br><br>
+
+                    <label for="gradYear">Graduation Year<span class="required-star">*</span></label>
+                    <input type="number" name="gradYear[]" min="1900" max="2025" required><br><br>
+                </div>
+            </div>
+            <button type="button" onclick="addEducation()">+ Add More Education</button>
+        </fieldset>
+        
