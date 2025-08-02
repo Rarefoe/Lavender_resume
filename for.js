@@ -188,3 +188,23 @@ window.onload = function () {
     `;
     container.appendChild(newDiv);
   };
+  window.addSkill = function () {
+    const container = document.getElementById("skillsSection");
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+      <label>Skill:</label>
+      <input type="text" name="skills[]" placeholder="e.g., Python, Project Management"><br><br>
+    `;
+    container.appendChild(newDiv);
+  };
+
+  window.addLanguage = function () {
+    const container = document.getElementById("languageSection");
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+      <label>Language:</label>
+      <input type="text" name="languages[]" placeholder="e.g., Spanish, French"><br><br>
+    `;
+    container.appendChild(newDiv);
+  };
+};
