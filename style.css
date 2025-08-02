@@ -147,3 +147,16 @@ p{
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(124, 77, 163, 0.3);
 }
+
+/* Testimonial Section */
+.testimonial {
+    max-width: 1000px;
+    background: #f3e9fa;
+    padding: 40px;
+    border-radius: 40px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #4f1a5a;
+    font-style: italic;
+    text-align: center;
+}
