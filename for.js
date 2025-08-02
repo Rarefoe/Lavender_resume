@@ -61,3 +61,10 @@ window.onload = function () {
           `;
         }
       }
+       // Collect dynamic skills
+      const skillsList = Array.from(document.getElementsByName("skills[]")).map(s => s.value).filter(s => s);
+      const skills = skillsList.join(", ");
+
+      // Collect dynamic languages
+      const languagesList = Array.from(document.getElementsByName("languages[]")).map(l => l.value).filter(l => l);
+      const languages = languagesList.join(", ");
