@@ -36,3 +36,13 @@ legend {
     color: #7a3ea1;
     margin-bottom: 10px;
 }
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=229682'),pointer;
+}
