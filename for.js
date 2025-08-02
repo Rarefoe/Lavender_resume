@@ -136,3 +136,13 @@ window.onload = function () {
           ` : ''}
         </div>
       `;
+      document.body.innerHTML = `
+        <h1 style="text-align:center; margin: 20px 0;">Your Generated Resume</h1>
+        ${resumeHTML}
+        <div style="text-align: center; margin: 30px 0;">
+          <button onclick="window.print()" class="btn" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 0 10px;">Download as PDF</button>
+          <button onclick="location.reload()" class="btn" style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 0 10px;">Create Another Resume</button>
+        </div>
+      `;
+    }
+  });
