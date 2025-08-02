@@ -74,3 +74,14 @@ input, textarea {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     font-family: Arial, sans-serif;
 }
+/* Left Column */
+.left-column {
+    background: #f3e8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Right Column */
+.right-column {
+    padding: 20px;
+}
