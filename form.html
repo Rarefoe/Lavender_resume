@@ -54,4 +54,26 @@
             </div>
             <button type="button" onclick="addEducation()">+ Add More Education</button>
         </fieldset>
-        
+         <!-- Work Experience -->
+        <fieldset>
+            <legend>Work Experience</legend>
+            <div id="experienceSection">
+                <div class="experience-entry">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" name="jobTitle[]"><br><br>
+
+                    <label for="company">Company</label>
+                    <input type="text" name="company[]"><br><br>
+
+                    <label for="startDate">Start Date</label>
+                    <input type="month" name="startDate[]"><br><br>
+
+                    <label for="endDate">End Date</label>
+                    <input type="month" name="endDate[]"><br><br>
+
+                    <label>Responsibilities / Achievements</label>
+                    <textarea name="responsibilities[]" rows="4" placeholder="Use bullet points for clarity"></textarea><br><br>
+                </div>
+            </div>
+            <button type="button" onclick="addExperience()">+ Add More Experience</button>
+        </fieldset>
