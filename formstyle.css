@@ -97,3 +97,23 @@ input, textarea {
     padding-bottom: 5px;
     margin-top: 20px;
 }
+/* Paragraphs */
+.resume-container p {
+    margin: 8px 0;
+}
+
+/* Download Button */
+button.btn {
+    background: #7a3ea1;
+    color: white;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.btn:hover {
+    background: #5a2a7d;
+}
