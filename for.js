@@ -81,3 +81,16 @@ window.onload = function () {
               ${links ? `<p><strong>Portfolio:</strong> <a href="${links}" target="_blank">${links}</a></p>` : ''}
             </div>
           </div>
+           ${careerObjective ? `
+          <div class="section">
+            <h2>Career Objective</h2>
+            <p>${careerObjective.replace(/\n/g, "<br>")}</p>
+          </div>
+          ` : ''}
+
+          ${educationHTML ? `
+          <div class="section">
+            <h2>Education</h2>
+            ${educationHTML}
+          </div>
+          ` : ''}
