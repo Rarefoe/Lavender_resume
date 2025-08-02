@@ -85,3 +85,15 @@ input, textarea {
 .right-column {
     padding: 20px;
 }
+/* Headings */
+.resume-container h1 {
+    font-size: 2rem;
+    color: #4f1a5a;
+}
+
+.resume-container h2 {
+    border-bottom: 2px solid #7a3ea1;
+    color: #7a3ea1;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
