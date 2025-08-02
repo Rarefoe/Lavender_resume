@@ -68,3 +68,16 @@ window.onload = function () {
       // Collect dynamic languages
       const languagesList = Array.from(document.getElementsByName("languages[]")).map(l => l.value).filter(l => l);
       const languages = languagesList.join(", ");
+       // Create resume HTML with proper styling
+      const resumeHTML = 
+      <div class="resume-container">
+          <div class="header">
+            ${profilePicHTML}
+            <h1>${fullName}</h1>
+            <div class="contact-info">
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone}</p>
+              <p><strong>Address:</strong> ${address}</p>
+              ${links ? `<p><strong>Portfolio:</strong> <a href="${links}" target="_blank">${links}</a></p>` : ''}
+            </div>
+          </div>
