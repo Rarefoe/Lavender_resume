@@ -94,3 +94,16 @@ window.onload = function () {
             ${educationHTML}
           </div>
           ` : ''}
+           ${experienceHTML ? `
+          <div class="section">
+            <h2>Work Experience</h2>
+            ${experienceHTML}
+          </div>
+          ` : ''}
+
+          ${skills ? `
+          <div class="section">
+            <h2>Skills</h2>
+            <p>${skills}</p>
+          </div>
+          ` : ''}
