@@ -76,41 +76,7 @@ window.onload = function () {
 
       // Create resume HTML with proper styling
       const resumeHTML = `
-        <style>
-          .resume-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-          }
-          .header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-          }
-          .section {
-            margin-bottom: 25px;
-          }
-          .section h2 {
-            color: #333;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-          }
-          .contact-info {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 15px 0;
-          }
-          .contact-info p {
-            margin: 5px;
-          }
-        </style>
+        
         <div class="resume-container">
           <div class="header">
             ${profilePicHTML}
