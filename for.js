@@ -169,3 +169,22 @@ window.onload = function () {
     `;
     container.appendChild(newDiv);
   };
+  window.addExperience = function () {
+    const container = document.getElementById("experienceSection");
+    const newDiv = document.createElement("div");
+    newDiv.className = "experience-entry";
+    newDiv.innerHTML = `
+      <hr style="margin: 20px 0;">
+      <label>Job Title:</label>
+      <input type="text" name="jobTitle[]"><br><br>
+      <label>Company:</label>
+      <input type="text" name="company[]"><br><br>
+      <label>Start Date:</label>
+      <input type="month" name="startDate[]"><br><br>
+      <label>End Date:</label>
+      <input type="month" name="endDate[]"><br><br>
+      <label>Responsibilities / Achievements:</label>
+      <textarea name="responsibilities[]" rows="4" placeholder="Use bullet points for clarity"></textarea><br><br>
+    `;
+    container.appendChild(newDiv);
+  };
