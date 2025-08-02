@@ -16,3 +16,17 @@ window.onload = function () {
     const certifications = document.getElementById("certifications").value;
     const projects = document.getElementById("projects").value;
     const references = document.getElementById("references").value;
+// Handle profile picture
+    const profilePicInput = document.getElementById("profilePic");
+    let profilePicHTML = "";
+    if (profilePicInput.files && profilePicInput.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        profilePicHTML = `<img src="${e.target.result}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">`;
+        generateResume();
+      };
+      reader.readAsDataURL(profilePicInput.files[0]);
+      return; // Wait for image to load
+    } else {
+      generateResume();
+    }
