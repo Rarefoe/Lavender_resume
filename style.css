@@ -117,3 +117,33 @@ p{
     background: #a845d4;
     transform: scale(1.05);
 }
+/* Features & Sections */
+.features, .how-it-works {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1080px) {
+    .features, .how-it-works {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.features div, .how-it-works div {
+    background: #f3e9fa;
+
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(124, 77, 163, 0.2);
+    border-left: 6px solid #c084fc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.features div:hover, .how-it-works div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(124, 77, 163, 0.3);
+}
